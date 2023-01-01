@@ -4,7 +4,8 @@
 
 ### The answer is displayed upon pressing the equal sign "="
 
-##Please use and reach out if there is any suggestion or ways of improvement.
+## Please use and reach out if there is any suggestion or ways of improvement.
 
-Thanks
-[Binary Numbers Calculator](https://bestbynature.github.io/binary-numbers-Calculator/)
+# Thanks.
+
+# [Binary Numbers Calculator](https://bestbynature.github.io/binary-numbers-Calculator/)
