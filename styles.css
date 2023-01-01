@@ -9,6 +9,11 @@ body{
     background: linear-gradient(to right, rgb(233, 84, 84), rgb(132, 206, 14));
 }
 
+header{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
 .container{
     width: 50%;
     margin: 40px auto;
