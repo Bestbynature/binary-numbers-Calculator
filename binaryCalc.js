@@ -1,5 +1,5 @@
 const buttons = document.getElementsByClassName('btn')
-const display = document.getElementById("res")
+const display = document.getElementById("display2")
 let signs, left, operand, right;
 Array.from(buttons).map(button =>{
     button.addEventListener("click", (e)=>{
@@ -7,19 +7,22 @@ Array.from(buttons).map(button =>{
             case "0":
                 if(display.innerHTML === "0")return;
                 display.innerHTML += "0";
+                (display)=>{
+                   return parseFloat(display.innerHTML).toLocaleString("en")
+                }
+                // display.innerHTML = (display.innerHTML).toLocaleString("en")
+
                 break;
             case "1":
-                display.innerHTML += "1";
+                display.innerHTML += "1"; 
                 break;
             case "+":
                 if(display.innerHTML === '') return;
                 if ((display.innerHTML).slice(-1) === '+') return;
                 signs = ["-", "*", "÷"]
                 if(signs.includes((display.innerHTML).slice(-1))) display.innerHTML = (display.innerHTML).slice(0, -1);
-
                 display.innerHTML += "+";
                 left = (display.innerHTML).slice(0, -1); operand = "+";
-
                 break;
             case "-":
                 if(display.innerHTML === '') return;
@@ -29,17 +32,14 @@ Array.from(buttons).map(button =>{
                 
                 display.innerHTML += "-";
                 left = (display.innerHTML).slice(0, -1); operand = "-";
-
-
                 break;
-            case "*":
+            case "X":
                 if(display.innerHTML === '') return;
-                if ((display.innerHTML).slice(-1) === '*') return;
+                if ((display.innerHTML).slice(-1) === 'X') return;
                 signs = ["-", "+", "÷"]
                 if(signs.includes((display.innerHTML).slice(-1))) display.innerHTML = (display.innerHTML).slice(0, -1);
                 display.innerHTML += "*";
                 left = (display.innerHTML).slice(0, -1); operand = "*";
-
                 break;
             case "÷":
                 if(display.innerHTML === '') return;
@@ -48,12 +48,14 @@ Array.from(buttons).map(button =>{
                 if(signs.includes((display.innerHTML).slice(-1))) display.innerHTML = (display.innerHTML).slice(0, -1);
                 display.innerHTML += "÷";
                 left = (display.innerHTML).slice(0, -1); operand = "/";
-
                 break;
-            case "C":
+            case "AC":
                 display.innerHTML = '';
                 left = '', operand = '';
                 break;
+            case "DEL":
+                    display.innerHTML = display.innerText.slice(0, -1);
+                    break;
             default:
                 if(display.innerHTML ==='')return;
                 right = (display.innerHTML).slice(left.length+1)
@@ -64,5 +66,5 @@ Array.from(buttons).map(button =>{
     })
 })
 
-let str = "Aberdeen"
-console.log(str.slice(0, -1))
+// let str = "Aberdeen"
+// console.log(str.slice(0, -1))

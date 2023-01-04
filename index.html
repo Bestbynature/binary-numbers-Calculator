@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Calculator</title>
-    <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <header><h1>A calculator for Binary Numbers Alone</h1> </header><br>
-    <div class="container">
-        <div id="res"></div>
-        <div id="btns">
-            <div id="btn0" class="btn">0</div>
-            <div id="btn1" class="btn">1</div>
-            <div id="btnClr" class="btn">C</div>
-            <div id="btnEql" class="btn">=</div>
-            <div id="btnSum" class="btn">+</div>
-            <div id="btnSub" class="btn">-</div>
-            <div id="btnMul" class="btn">*</div>
-            <div id="btnDiv" class="btn">&divide;</div>
+    <div class="wrapper">
+        <div class="output">
+            <div id="display1"><strong> A Simple Binary Calculator</strong></div>
+            <div id="display2"></div>
         </div>
+        <button class="btn spancol">0</button>
+        <button class="btn spancol">1</button>
+        <button class="btn">AC</button>
+        <button class="btn">&divide;</button>
+        <button class="btn">DEL</button>
+        <button class="btn spanrow">=</button>
+        <button class="btn">+</button>
+        <button class="btn">-</button>
+        <button class="btn">X</button>
     </div>
 
+    
     <script src="./binaryCalc.js"></script>
     
 </body>
